@@ -76,9 +76,10 @@ filed: Field = get_clear_field()
 
 
 # filed = gen_random()
-form: Field = read_form(path="redit.gol")
+form: Field = read_form(path="idk_1.gol")
 
-filed = a(filed=filed, figure=form, offset=(0, 0))
+# filed = a(filed=filed, figure=form, offset=(0, 0))
+filed = a(filed=filed, figure=form, offset=(size[0] // 2, size[1] // 2))
 
 highest_step_count: int = 0
 try:
