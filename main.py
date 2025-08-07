@@ -59,7 +59,7 @@ def cycle(filed: Field) -> tuple[Field, int]:
 
 def read_form(path: str = "form.gol") -> Field:
     with open(f"forms/{path}", "r") as file:
-        return [[True if c != " " else False for c in list(line.strip("\n"))] for line in file.readlines()]
+        return [[True if c != "." else False for c in list(line.strip("\n"))] for line in file.readlines()]
 
 
 def a(filed: Field, figure: Field, offset: tuple[int, int]) -> Field:
@@ -76,7 +76,7 @@ filed: Field = get_clear_field()
 
 
 # filed = gen_random()
-form: Field = read_form(path="glider_gun.gol")
+form: Field = read_form(path="redit.gol")
 
 filed = a(filed=filed, figure=form, offset=(0, 0))
 
