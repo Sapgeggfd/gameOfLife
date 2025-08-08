@@ -7,9 +7,9 @@ type Field = list[list[bool]]
 # Vertical screen w,h
 # size: tuple[int, int] = 176, 160
 # Horizontal screen w,h
-# size: tuple[int, int] = 316, 86
+size: tuple[int, int] = int(316 * 1.59999), int(86 * 1.59999)
 # Laptop screen w,h
-size: tuple[int, int] = 236, 63
+# size: tuple[int, int] = 236, 63
 
 
 def get_clear_field() -> Field:
@@ -76,10 +76,10 @@ filed: Field = get_clear_field()
 
 
 # filed = gen_random()
-form: Field = read_form(path="idk_1.gol")
+form: Field = read_form(path="test.gol")
 
 # filed = a(filed=filed, figure=form, offset=(0, 0))
-filed = a(filed=filed, figure=form, offset=(size[0] // 2, size[1] // 2))
+filed = a(filed=filed, figure=form, offset=(size[0] // 2, size[1] // 2 - 8))
 
 highest_step_count: int = 0
 try:
